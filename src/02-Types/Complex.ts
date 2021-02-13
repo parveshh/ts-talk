@@ -13,6 +13,7 @@ export type DebitCard = {
   cancelled: boolean;
 };
 
+
 // Objects of types
 const card1: CreditCard = {
   cardExpiry: "01/22",
