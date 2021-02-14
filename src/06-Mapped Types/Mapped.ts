@@ -11,20 +11,11 @@ type Settings = {
 // type Optional<T> = { [P in keyof T]+?: T[P] };
 
 type Optional<T> = { [P in keyof T]+?: T[P] };
-type Filter<T, U extends keyof T> = {[P in U]-?: T[P]}
+type Filter<T, U extends keyof T> = { [P in U]-?: T[P] };
 
-type MakeRequired<T, U extends keyof T> = Optional<T> & Filter<T,U>
+type Stateful<T, U extends keyof T> = Optional<T> & Filter<T, U>;
 
-type test = Filter<{a?:number,b:number},'a'>
-
-type test2 = MakeRequired<{a?:number,b?:number}, 'a'>
-
-
-
-type Test = [
-  Filter<{id:number,active:boolean}, 'active'>
-]
-
+type test = Filter<{ a?: number; b: number }, "a">;
 
 class State {
   constructor(private state: Settings) {}
@@ -33,9 +24,13 @@ class State {
     return this.state;
   }
 
-  updateState(currentState:  MakeRequired<Optional<Settings>,'id'> ) {
+  updateState(currentState: Settings) {
     this.state = Object.assign({}, this.state, currentState);
   }
+
+  // updateState(currentState: Stateful<Settings, "id">) {
+  //   this.state = Object.assign({}, this.state, currentState);
+  // }
 }
 
 const userSettingsState = new State({
@@ -48,4 +43,4 @@ const userSettingsState = new State({
 });
 
 //update state
-userSettingsState.updateState({id:1})
+// userSettingsState.updateState({ id: 1 });

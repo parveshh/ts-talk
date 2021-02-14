@@ -3,6 +3,14 @@
 //     return obj[prop]
 // }
 
+type user = {
+  id: number;
+  name: string;
+};
+
+type UserKeys = keyof user; // will be a union type of "id"|"name"
+const userKeys: UserKeys = "id";
+
 function getProperty<T>(obj: T, prop: keyof T) {
   return obj[prop];
 }
