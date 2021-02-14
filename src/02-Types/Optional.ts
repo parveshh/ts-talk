@@ -6,6 +6,12 @@ type User = {
   debitCard: DebitCard;
 };
 
-function cardDetails(user: User) {
+/**
+ *
+ * show here that we cannot access creditCard without null checks
+ */
+function hasCreditCard(user: User): boolean {
   // return user.creditCard.cancelled;
+
+  return false;
 }
