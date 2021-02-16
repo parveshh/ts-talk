@@ -1,15 +1,20 @@
-function multiply(a, b) {
-  return a * b;
+function addTarget(obj) {
+    if (obj === void 0) { obj = { target: '' }; }
+    obj.target = 'target';
+    return obj;
 }
 
-function addTarget(targetObj = {}) {
-  targetObj.target = "target";
-  return targetObj;
+var user = {
+    'id': 1,
+    firstName: 'Donald',
+    lastName: 'T',
+    isPresident: function () { /** Some process here.. */ return false; }
+};
+
+// lets check if user is president then allow to delete files
+if (user.isPresident) {
+    // delete all files
+    console.log('files deleted');
 }
-
-multiply(10, 20);
-multiply("10", "200"); //?
-multiply("", ""); // ?
-
-addTarget() // ?
-addTarget(null)
+console.log(addTarget());
+console.log(addTarget(null))

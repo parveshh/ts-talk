@@ -1,3 +1,5 @@
+import { type } from "node:os";
+
 export type Common<T, U> = {
   [key in keyof T & keyof U]: T[key] extends true ? key : never;
 }[keyof T & keyof U];
@@ -18,21 +20,4 @@ export type User = {
   address: string;
   vehicle: string;
 };
-
-type last<T extends unknown[]> = T extends [...infer Head, infer Tail] ? Tail :[...T]
-
-// type Reverse<T extends unknown[]> = T extends [ infer Head,  ...infer Rest]
-//        ? [...Reverse<Rest>, Head] : [];
-
-type Revert<T extends unknown[]> = T extends [ infer Head,  ...infer Rest]
-       ? [...Revert<Rest>, Head] : [];
-    
-type rows = "1"|"2"|"3"|"4"
-type columns = "a"|"b"|"c"|"d"
-
-type Positions = `${rows}${columns}`
-type possiblePositons = [Positions];
-
-const currentPosition: Positions = "2a";
-
 

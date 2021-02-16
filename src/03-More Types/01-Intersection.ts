@@ -11,4 +11,4 @@ const position1: Position2D = {
   y: 20,
 };
 
-const position2: Position3D = { x: 10, y: 20, z: 30 };
+const position2: Position3D = { x:10,y:10,z:10 };

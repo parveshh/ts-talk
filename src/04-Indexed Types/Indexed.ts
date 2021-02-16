@@ -1,26 +1,17 @@
 // so lets now talked about indexed types
 
-import { CreditCard, DebitCard } from "../02-Types/Complex";
+import { CreditCard, DebitCard } from "../02-Types/02-Complex";
 
 // lets import our card types
 
-type Card = CreditCard | DebitCard;
+// indexed type
+type Card = {
+  [cardName: string]: CreditCard | DebitCard
+}
 
-type User = {
-  id: number;
-  name: string;
-  cards: Card[];
-};
 
-const user: User = {
-  id: 1,
-  name: "Andy",
-  cards: [
-    {
-      cancelled: true,
-      cardExpiry: "10/22",
-      cardNumber: "1122334455667788",
-      cardType: "Credit",
-    },
-  ],
-};
+const userCards: Card = {
+  "shopping card" : {cancelled: true, cardExpiry: "10/12", cardNumber:"2134325436456", cardType:"Debit"},
+  "cashback card" : {cancelled: true, cardExpiry: "10/12", cardNumber:"2134325436456", cardType:"Debit"},
+}
+
