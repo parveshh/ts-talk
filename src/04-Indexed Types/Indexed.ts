@@ -1,10 +1,10 @@
-// so lets now talked about indexed types
+// so lets now talked about index types
 
 import { CreditCard, DebitCard } from "../02-Types/02-Complex";
 
 // lets import our card types
 
-// indexed type
+// index type
 type Card = {
   [cardName: string]: CreditCard | DebitCard
 }

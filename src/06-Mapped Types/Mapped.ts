@@ -4,7 +4,7 @@ type Settings = {
   isActive: boolean;
   isBanned: boolean;
   lastPasswordChange: Date;
-  lastLogin: Date;
+  lastLogin?: Date;
 };
 
 //  mapped type
@@ -18,15 +18,20 @@ type Stateful<T, U extends keyof T> = Optional<T> & Filter<T, U>;
 type test = Filter<{ a?: number; b: number }, "a">;
 }
 
+type Optional<T> = {[P in keyof T]+?:T[P] }
+
+type Mandatory<T> = {[P in keyof T]-?:T[P] }
+
+
 
 class SettingsService {
   constructor(private settings: Settings) {}
 
-  getState(): Settings {
+  getSettings(): Settings {
     return this.settings;
   }
 
-  updateState(currentState: Settings) : void {
+  updateSettings(currentState: Optional<Settings>) : void {
     this.settings = Object.assign({}, this.settings, currentState);
   }
 }
@@ -39,6 +44,9 @@ const userSettingsState = new SettingsService({
   lastLogin: new Date(),
   lastPasswordChange: new Date(),
 });
+
+
+userSettingsState.updateSettings({isActive:false})
 
 //update state
 // userSettingsState.updateState({ id: 1 });

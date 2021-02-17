@@ -11,8 +11,8 @@ let g: any = {}; // should only be used in special cases
 let h: unknown = "name";// before using we need to check what is the type
 let i: never // this will never happen
 
-
-// if(typeof h === "number"){
+// if(typeof h === 'string'){
+    
 // }
 
 // important here that null and undefined are also types so we have to define an object to be of type null to assign it null, else

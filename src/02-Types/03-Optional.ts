@@ -13,8 +13,8 @@ type BankCustomer = {
 function hasCreditCard(user: BankCustomer): boolean {
 
 
-// if(user.creditCard){
-//   return user.creditCard.cancelled
+// if(user.creditCard !== undefined){
+//   user.creditCard.
 // }
 
   return false;

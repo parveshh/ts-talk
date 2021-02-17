@@ -1,5 +1,6 @@
 enum Colors  {
-    "Red",
-    "Blue",
-    "Green"
+    Red,
+    Blue,
+    Green
 }
+

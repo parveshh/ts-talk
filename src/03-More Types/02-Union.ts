@@ -33,6 +33,7 @@ type Truck = {
 };
 
 type Vehicle = SportsCar | Truck;
+
 // control flow analysis
 function getTowingCapacity(vehicle: Vehicle): number {
 

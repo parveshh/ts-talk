@@ -16,12 +16,11 @@ export type DebitCard = {
 
 // Objects of types
 const card1: CreditCard = {
-  cardExpiry: "01/22",
-  cardNumber: "0345890776548765",
-  cancelled: false,
-  cardType: "Credit",
-};
-
+  cancelled:false,
+  cardExpiry:"10/22",
+  cardNumber:'3244545',
+  cardType:"Credit"
+}
 const card2: DebitCard = {
   cardExpiry: "01/22",
   cardNumber: "0345890776548765",
