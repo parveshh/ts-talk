@@ -12,7 +12,7 @@ var user = {
 };
 
 // lets check if user is president then allow to delete files
-if (user.isPresident) {
+if (user.isPresident()) {
   // delete all files
   console.log('files deleted');
 }
