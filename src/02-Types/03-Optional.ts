@@ -6,16 +6,14 @@ type BankCustomer = {
   debitCard: DebitCard;
 };
 
-/**
- *
- * show here that we cannot access creditCard without null checks
- */
-function hasCreditCard(user: BankCustomer): boolean {
+{
+  function hasCreditCard(user: BankCustomer): boolean {
 
-
-// if(user.creditCard !== undefined){
-//   user.creditCard.
-// }
-
-  return false;
+    // if(user.creditCard !== undefined){
+    //   user.creditCard.
+    // }
+    
+      return false;
+    }
 }
+

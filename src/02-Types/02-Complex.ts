@@ -14,6 +14,7 @@ export type DebitCard = {
 };
 
 
+
 // Objects of types
 const card1: CreditCard = {
   cancelled:false,
@@ -28,5 +29,19 @@ const card2: DebitCard = {
   cancelled: false,
   cardType: "Debit",
 };
+
+{
+  enum CardType {
+    FOO,
+    BAR
+  }
+  {
+    let CardType;
+    (function (CardType) {
+      CardType[CardType("FOO")=0]="FOO";
+      CardType[CardType("BAR")=1]="BAR";
+    })(CardType || (CardType = {}));
+  }
+}
 
 // required props
