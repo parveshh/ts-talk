@@ -16,7 +16,7 @@ const mycard: Card = {
 };
 
 {
-/// Discriminated Union
+/// Discriminated Union: Types don't have similar props
 
 type SportsCar = {
   make: string;

@@ -11,6 +11,7 @@ let g: any = {}; // should only be used in special cases
 let h: unknown = "name";// before using we need to check what is the type
 let i: never // this will never happen
 
+// unknown explain without assertion
 // if(typeof h === 'string'){
     
 // }
