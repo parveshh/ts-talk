@@ -29,4 +29,16 @@ const card2: DebitCard = {
   cardType: "Debit",
 };
 
-// required props
+{
+  enum CardType {
+    FOO,
+    BAR
+  }
+  {
+    let CardType;
+    (function (CardType) {
+      CardType[CardType("FOO")=0]="FOO";
+      CardType[CardType("BAR")=1]="BAR";
+    })(CardType || (CardType = {}));
+  }
+}

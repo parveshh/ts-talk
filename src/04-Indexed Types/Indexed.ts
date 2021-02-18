@@ -1,4 +1,3 @@
-// so lets now talked about index types
 
 import { CreditCard, DebitCard } from "../02-Types/02-Complex";
 
@@ -10,7 +9,7 @@ type Card = {
 }
 
 const userCards: Card = {
-  "shopping card" : {cancelled: true, cardExpiry: "10/12", cardNumber:"2134325436456", cardType:"Debit"},
-  "cashback card" : {cancelled: true, cardExpiry: "10/12", cardNumber:"2134325436456", cardType:"Debit"},
+  "Shopping_Card" : {cancelled: true, cardExpiry: "10/12", cardNumber:"2134325436456", cardType:"Debit"},
+  "Cashback_Card" : {cancelled: true, cardExpiry: "10/12", cardNumber:"2134325436456", cardType:"Debit"},
 }
 

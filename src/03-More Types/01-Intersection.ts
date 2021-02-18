@@ -3,8 +3,11 @@ type Position2D = {
   y: number;
 };
 
+type Postion1D = {
+  z: number
+}
 // intersection type
-type Position3D = Position2D & { z: number };
+type Position3D = Postion1D & Position2D;
 
 const position1: Position2D = {
   x: 10,
