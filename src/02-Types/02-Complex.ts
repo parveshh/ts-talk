@@ -14,7 +14,6 @@ export type DebitCard = {
 };
 
 
-
 // Objects of types
 const card1: CreditCard = {
   cancelled:false,
@@ -43,5 +42,3 @@ const card2: DebitCard = {
     })(CardType || (CardType = {}));
   }
 }
-
-// required props

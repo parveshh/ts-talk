@@ -12,7 +12,7 @@ const mycard: Card = {
   cancelled: true,
   cardExpiry: "10/22",
   cardNumber: "23417868909876534",
-  cardType: "Credit", // so her we can select which card this is
+  cardType: "Debit", // so her we can select which card this is
 };
 
 
@@ -37,6 +37,7 @@ const mycard: Card = {
 
   // control flow analysis
   function getTowingCapacity(vehicle: Vehicle): number {
+  
     {
       switch (vehicle.kind) {
         case "carrier":
