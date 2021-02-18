@@ -10,7 +10,7 @@ export type User = {
 
 
 // making all props of type T boolean and optional
-type BooleanOf<T> = { [P in keyof T]?: boolean };
+export type BooleanOf<T> = { [P in keyof T]?: boolean };
 
 // making all types of type T optional
 type Optional<T> = {
@@ -21,7 +21,7 @@ type Optional<T> = {
 type Get<T, U extends keyof T> = { [P in U]-?: T[P] }
 
 // getting all the common keys only if a key in T is true , but if T is '*' then get all the keys from U
-type Common<T extends BooleanOf<U> | "*", U> = T extends "*" ? keyof U : {
+export type Common<T extends BooleanOf<U> | "*", U> = T extends "*" ? keyof U : {
   [key in keyof T & keyof U]: T[key] extends true ? key
   : never;
 }[keyof T & keyof U];

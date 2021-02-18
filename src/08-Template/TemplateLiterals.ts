@@ -20,6 +20,7 @@
   // remove zero from numbers
   type NonZero = Remove<Numbers, 0>;
 
+  // template literals types are constrained to 10,000 combinations
   type Year = `${NonZero}${Numbers}${Numbers}${Numbers}`
 
 
@@ -32,6 +33,6 @@
 
   const cust:Customer = {
     id:1,
-    YearOfRegistration:""
+    YearOfRegistration:"1000"
   }
 }
