@@ -1,5 +1,5 @@
 import { Repository } from "../interfaces/Repository";
-import { BooleanOf, Common, User } from "../types/types";
+import { BooleanOf, Common, User } from "../10-UseCase/types";
 
 export class UserRepository implements Repository<User> {
 

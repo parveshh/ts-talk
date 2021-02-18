@@ -2,23 +2,25 @@
 {
   type Row = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8;
   type Column = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8;
-  type Position = `${Row}${Column}`
 
-  function movePlayer(postion:Position){
+  type Position = `${Row}${Column}`;
+
+  function movePlayer(args: Position){
 
   }
-
 
 
 }
 {
   type Numbers = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 0;
 
+  // remove key U from T
   type Remove<T, U> = T extends U ? never : T;
 
+  // remove zero from numbers
   type NonZero = Remove<Numbers, 0>;
 
-  type Year = `2${Numbers}${Numbers}${Numbers}`
+  type Year = `${NonZero}${Numbers}${Numbers}${Numbers}`
 
 
 
@@ -30,6 +32,6 @@
 
   const cust:Customer = {
     id:1,
-    YearOfRegistration:"2019"
+    YearOfRegistration:""
   }
 }

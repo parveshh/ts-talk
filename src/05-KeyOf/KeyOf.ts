@@ -1,13 +1,5 @@
 // to get value of a property
 
-
-
-const person = {
-  name:"person",
-  dob:"17/04/85",
-  address:"test"
-}
-
 type User = {
   id: number;
   name: string;
